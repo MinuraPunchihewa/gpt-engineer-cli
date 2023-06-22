@@ -11,3 +11,10 @@ from gpt_engineer.main import app
 )
 def build(directory):
     click.echo(f'Building project in {directory}...')
+
+
+cli = click.Group()
+cli.add_command(build)
+
+if __name__ == "__main__":
+    cli()
